@@ -1,0 +1,101 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-image: linear-gradient(#1662b1de,#940606f7,#24a215);
+}
+.kub-body{
+    width: 100%;
+    height: 100%;
+    margin: auto; 
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.kub{
+    position: relative;
+    margin: auto;  
+    width: 550px;
+    height: 550px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+}
+.cub{
+    display: flex;
+    top: 125px;
+    justify-content: center;
+    align-items:center; 
+    position: relative;
+    margin: auto;  
+    height: 300px;
+    width: 300px;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    transform: rotateX(54.66deg) rotateY(45deg) rotateZ(0deg);/*положение куба
+     в контейнере который будет вращаться, можно поменять на любий вид*/
+}
+.size1,
+.size2,
+.size3,
+.size4,
+.size5,
+.size6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;  
+    height: 100%;
+    width: 100%;  
+    border: 5px solid white;
+    box-sizing: border-box;
+}
+ h1{
+ 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 38px;
+	letter-spacing: 7px;
+	color: white;
+    border: 5px dashed white;
+    border-radius: 15px;
+    transform-origin: center center;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(315deg);/*вращение надписи */
+}
+.size1{
+    transform: translateZ(150px);
+    background: #fbff00c9;
+}
+.size2{
+    transform: translateZ(-150px) rotateY(180deg);
+    background: #d81616d4;
+}
+.size3{
+    transform: rotateY(-270deg) translateX(150px);
+    transform-origin: top right;
+    background: #11cbdee8;
+}
+.size4{
+    transform: rotateY(270deg) translateX(-150px);
+    transform-origin: center left;
+    background: #1020e4e0;
+}
+.size5{
+    transform: rotateX(-270deg) translateY(-150px);
+    transform-origin: top center;
+    background: #ea05f9e0;
+}
+.size6{
+    transform: rotateX(270deg) translateY(150px);
+    transform-origin: bottom center;
+    background: #10e417e8;
+}
+.kub:hover{
+    transform: rotateX(0deg) rotateY(36000deg) rotateZ(0deg);
+    /* transform: rotateX(36000deg) rotateY(36000deg) rotateZ(36000deg)- меняя и 
+    комбинируя вращения по осям получаются прикольные штуки */
+    transition:300s;
+    transition-timing-function: linear;
+}
